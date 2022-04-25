@@ -1,0 +1,10 @@
+select CUSTOMER_ID ,  max(purchase_Amount) from orders
+group by CUSTOMER_ID;
+
+select SALESMAN_ID ,max(purchase_Amount) from orders 
+where Order_DATE = '17-AUG-12'
+group by SALESMAN_ID;
+
+select Order_Date , CUSTOMER_ID ,max(purchase_Amount) from orders
+group by CUSTOMER_ID , Order_Date
+having MAX(purchase_Amount) IN (2030, 3450, 5760, 6000);

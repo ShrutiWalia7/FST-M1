@@ -1,0 +1,17 @@
+select * from salesman
+select * from orders
+select * from customers
+
+SELECT * FROM orders
+WHERE salesman_id=(SELECT DISTINCT salesman_id FROM orders WHERE customer_id=3007);
+
+SELECT * FROM orders
+WHERE salesman_id IN (SELECT salesman_id FROM salesman WHERE city='New York');
+
+SELECT grade, COUNT(*) FROM customers
+GROUP BY grade HAVING grade>(SELECT AVG(grade) FROM customers WHERE city='New York');
+
+Write a query to extract the data from the orders table for those salesman who earned the maximum commission
+
+SELECT * FROM orders 
+where SALESMAN_id = (select SALESMAN_ID from salesman where COMMISSION = (select max(COMMISSION) from salesman))  

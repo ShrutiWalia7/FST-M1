@@ -1,0 +1,5 @@
+select salesman_id , salesman_city from salesman;
+
+select * from salesman where salesman_city = 'Paris';
+
+select SALESMAN_ID , SALESMAN_ID from salesman where SALESMAN_NAME = 'Paul Adam';

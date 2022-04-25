@@ -1,0 +1,8 @@
+
+select distinct * from salesman;
+
+update salesman set grade = 200 where SALESMAN_CITY	= 'ROME';
+update salesman set grade = 300 where SALESMAN_NAME	= 'James Hoog';
+update salesman set SALESMAN_NAME = 'Pierre' where SALESMAN_NAME = 'McLyon';
+
+select distinct * from salesman;
